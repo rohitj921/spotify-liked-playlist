@@ -1,0 +1,19 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: Spotify-Auto-Liked-to-Public-Playlist
+    src: ./
+    engine: python3.9
+    primary: true
+    public: false
+    # presets:
+    #   env:
+    #     - name: TOKEN
+    #     - name: CLIENT_ID
+    #     - name: CLIENT_SECRET
+
+    actions:
+      - id: "script"
+        name: "Main Script"
+        trigger: "schedule"
+        default_interval: "0/1 * * * *"
